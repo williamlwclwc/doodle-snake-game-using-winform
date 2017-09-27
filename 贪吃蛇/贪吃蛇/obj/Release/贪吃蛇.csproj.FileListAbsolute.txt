@@ -1,0 +1,10 @@
+C:\william liu\program projects\贪吃蛇\贪吃蛇\bin\Release\贪吃蛇.exe.config
+C:\william liu\program projects\贪吃蛇\贪吃蛇\bin\Release\贪吃蛇.exe
+C:\william liu\program projects\贪吃蛇\贪吃蛇\bin\Release\贪吃蛇.pdb
+C:\william liu\program projects\贪吃蛇\贪吃蛇\bin\Release\DevComponents.DotNetBar2.dll
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.MainForm.resources
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.Properties.Resources.resources
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.csproj.GenerateResource.Cache
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.exe
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.pdb
+C:\william liu\program projects\贪吃蛇\贪吃蛇\obj\Release\贪吃蛇.csprojResolveAssemblyReference.cache
