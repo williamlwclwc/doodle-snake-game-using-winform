@@ -32,15 +32,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.开始游戏ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.难度设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.地狱模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.查看最高分数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看历史最高分记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清除最高分记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +57,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(900, 480);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // 开始游戏ToolStripMenuItem
@@ -71,80 +70,65 @@
             // 难度设置ToolStripMenuItem
             // 
             this.难度设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.地狱模式ToolStripMenuItem,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9});
+            this.toolStripMenuItem5});
             this.难度设置ToolStripMenuItem.Name = "难度设置ToolStripMenuItem";
             this.难度设置ToolStripMenuItem.Size = new System.Drawing.Size(94, 28);
             this.难度设置ToolStripMenuItem.Text = "难度设置";
             // 
+            // 地狱模式ToolStripMenuItem
+            // 
+            this.地狱模式ToolStripMenuItem.Name = "地狱模式ToolStripMenuItem";
+            this.地狱模式ToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.地狱模式ToolStripMenuItem.Text = "地狱模式";
+            this.地狱模式ToolStripMenuItem.Click += new System.EventHandler(this.地狱模式ToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem2.Text = "8";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 30);
+            this.toolStripMenuItem2.Text = "困难";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem3.Text = "7";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 30);
+            this.toolStripMenuItem3.Text = "中等";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem4.Text = "6";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem5.Text = "5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(164, 30);
+            this.toolStripMenuItem5.Text = "简单";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem6.Text = "4";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem7.Text = "3";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem8.Text = "2";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(103, 30);
-            this.toolStripMenuItem9.Text = "1";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // 查看最高分数ToolStripMenuItem
             // 
+            this.查看最高分数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.查看历史最高分记录ToolStripMenuItem,
+            this.清除最高分记录ToolStripMenuItem});
             this.查看最高分数ToolStripMenuItem.Name = "查看最高分数ToolStripMenuItem";
-            this.查看最高分数ToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
-            this.查看最高分数ToolStripMenuItem.Text = "查看历史最高分数";
+            this.查看最高分数ToolStripMenuItem.Size = new System.Drawing.Size(76, 28);
+            this.查看最高分数ToolStripMenuItem.Text = "最高分";
             this.查看最高分数ToolStripMenuItem.Click += new System.EventHandler(this.查看最高分数ToolStripMenuItem_Click);
+            // 
+            // 查看历史最高分记录ToolStripMenuItem
+            // 
+            this.查看历史最高分记录ToolStripMenuItem.Name = "查看历史最高分记录ToolStripMenuItem";
+            this.查看历史最高分记录ToolStripMenuItem.Size = new System.Drawing.Size(254, 30);
+            this.查看历史最高分记录ToolStripMenuItem.Text = "查看历史最高分记录";
+            this.查看历史最高分记录ToolStripMenuItem.Click += new System.EventHandler(this.查看历史最高分记录ToolStripMenuItem_Click);
+            // 
+            // 清除最高分记录ToolStripMenuItem
+            // 
+            this.清除最高分记录ToolStripMenuItem.Name = "清除最高分记录ToolStripMenuItem";
+            this.清除最高分记录ToolStripMenuItem.Size = new System.Drawing.Size(254, 30);
+            this.清除最高分记录ToolStripMenuItem.Text = "清除最高分记录";
+            this.清除最高分记录ToolStripMenuItem.Click += new System.EventHandler(this.清除最高分记录ToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -170,6 +154,7 @@
             this.label1.Size = new System.Drawing.Size(152, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "当前得分：";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -213,16 +198,14 @@
         private System.Windows.Forms.ToolStripMenuItem 难度设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem 查看最高分数ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem 地狱模式ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查看历史最高分记录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清除最高分记录ToolStripMenuItem;
     }
 }
 

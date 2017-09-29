@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -62,11 +63,11 @@ namespace 贪吃蛇
             timerblock.AutoReset = true;//触发elapsed事件后重置计时器
             timerblock.Start();//开始计时
         }
-        //每移动一步实时更新
+        //根据speed，每隔一段时间更新一次
         private void OnBlockTimeEvent(object source,ElapsedEventArgs e)
         {
-            this.Move();//前进一个单位
-            if (this.Checkdeath())//死亡检测
+            this.Move();//自动前进一个单位
+            if (Checkdeath())//死亡检测
             {
                 //如果死亡
                 this.timerblock.Stop();//停止计时器
@@ -176,6 +177,12 @@ namespace 贪吃蛇
             {
                 block.Paint(gp);
             }
+        }
+        //结束游戏进程
+        public void Stop()
+        {
+            this.timerblock.Stop();//停止计时器
+            this.timerblock.Dispose();//释放timerblock的空间
         }
         //枚举方向
         public enum directions
